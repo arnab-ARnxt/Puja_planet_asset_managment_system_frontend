@@ -1,0 +1,38 @@
+[
+	{
+		"assetId": "ppasset1",
+		"name": "Rajbari",
+		"version": 1,
+		"fileUrl": "s3Url",
+		"dateAdded": "sample_date_added",
+		"dateUpdated": "sample_date_updated",
+		"isRequired": true
+	},
+	{
+		"assetId": "ppasset2",
+		"name": "Mall",
+		"version": 3,
+		"fileUrl": "s3Url",
+		"dateAdded": "sample_date_added",
+		"dateUpdated": "sample_date_updated",
+		"isRequired": true
+	},
+	{
+		"assetId": "ppasset3",
+		"name": "Value8",
+		"version": 1,
+		"fileUrl": "s3Url",
+		"dateAdded": "sample_date_added",
+		"dateUpdated": "sample_date_updated",
+		"isRequired": true
+	},
+	{
+		"assetId": "ppasset4",
+		"name": "Value11",
+		"version": 2,
+		"fileUrl": "s3Url",
+		"dateAdded": "sample_date_added",
+		"dateUpdated": "sample_date_updated",
+		"isRequired": true
+	}
+]

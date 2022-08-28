@@ -1,0 +1,25 @@
+.Asset {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 1rem 0;
+}
+
+.Asset img {
+	height: 3rem;
+	width: 3rem;
+}
+
+.Asset button {
+	border: none;
+	outline: none;
+	background-color: #fafafa;
+	padding: 1rem;
+	cursor: pointer;
+}
+
+.Asset .delete {
+    cursor: pointer;
+    height: 2rem;
+    width: 2rem;
+}
