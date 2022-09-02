@@ -2,13 +2,13 @@ import AssetList from './AssetList';
 import './UnityApp.css';
 import FileUpload from './FileUpload';
 // import rawData from '../rawData.json';
-import axios from 'axios';
+import axios from '../axios';
 import React, { useEffect, useState } from 'react';
 
 const UnityApp = () => {
 	const [num, setNum] = useState([]);
 	async function getData() {
-		const res = await axios.get(`http://localhost:8081/api/v1/files/`);
+		const res = await axios.get(`/files`);
 		setNum(res.data.data.files.Items);
 	}
 	useEffect(() => {

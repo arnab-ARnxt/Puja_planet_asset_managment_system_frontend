@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './Modal.module.css';
-import axios from 'axios';
+import axios from '../axios';
 
 const FileInput = ({ selectedImage, setSelectedImage }) => {
 	return (
@@ -41,7 +41,7 @@ const Modal = ({ assetID, setIsOpen, getData, isForUpdate, name: fileName, fileU
 			const formData = new FormData();
 			formData.append('photo', selectedImage);
 			formData.append('name', name);
-			await axios.put('http://localhost:8081/api/v1/files/', formData);
+			await axios.put('/files/', formData);
 			setIsOpen(false);
 			window.location.reload(false);
 		}
