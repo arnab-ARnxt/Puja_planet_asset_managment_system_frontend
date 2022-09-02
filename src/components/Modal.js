@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styles from './Modal.module.css';
-import axios from '../axios';
+import axios from 'axios';
 
 const FileInput = ({ selectedImage, setSelectedImage, isForUpdate }) => {
 	const [localIsForUpdate, setLocalIsForUpdate] = useState(isForUpdate);
@@ -52,7 +52,14 @@ const Modal = ({ assetID, setIsOpen, getData, isForUpdate, name: fileName, fileU
 			if (name) formData.append('name', name);
 			console.log(formData);
 			let response;
-			response = await axios.patch(`/files/${assetID}`, formData);
+			if (!isForUpdate) {
+				response = await axios.put('http://localhost:8081/api/v1/files/', formData);
+			} else {
+				response = await axios.patch(
+					`http://localhost:8081/api/v1/files/${assetID}`,
+					formData
+				);
+			}
 			console.log(response);
 			setIsOpen(false);
 			window.location.reload(false);

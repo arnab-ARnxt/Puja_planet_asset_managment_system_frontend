@@ -1,7 +1,7 @@
 import './Asset.css';
 import fileIcon from '../assets/file-solid.svg';
 import deleteIcon from '../assets/trash-solid.svg';
-import axios from '../axios';
+import axios from 'axios';
 import Modal from './Modal';
 import { useState } from 'react';
 
@@ -9,7 +9,7 @@ const Asset = ({ assetID, name, versions, fileUrl, dateAdded, getData }) => {
 	const [isModalOpen, setIsModalOpen] = useState(false);
 
 	async function deletePhoto() {
-		const response = await axios.delete(`/files/${assetID}`);
+		const response = await axios.delete(`http://3.111.42.211:8081/api/v1/files/${assetID}`);
 		console.log(response);
 		getData();
 	}
